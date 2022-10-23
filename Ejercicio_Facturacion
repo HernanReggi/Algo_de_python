@@ -1,0 +1,20 @@
+importe= float(input('ingrese valor del importe de la factura; '))
+categoria= str(input('ingrese categoria de factura "A", "B", "C"; '))
+while categoria != 'A' and categoria != 'B' and categoria != 'C':
+    print('categoria erronea')
+    categoria = str(input('ingrese categoria de factura "A", "B", "C"; '))
+edad= int(input('ingrese edad del cliente; '))
+desc1= importe*3/100
+desc2= importe*5/100
+desc3= importe*8/100
+
+if edad>=18 and edad<=25 and categoria=='A':
+    print('calificado para obtener descuento de 3%;', desc1,'$')
+elif edad>25 and edad<=50 and categoria== 'B':
+    print('calificado para obtener descuento de 5%;', desc2,'$')
+elif edad>50 and categoria=='C':
+    print('calificado para obtener descuento de 8%;', desc3,'$')
+else:
+    print('no calificado para recibir descuento;', importe)
+
+print('fin de la carga de factura')
