@@ -1,0 +1,31 @@
+from random import*
+
+jugador1 = 0
+jugador2 = 0
+ronda = 0
+aceptacion= str(input('BIENVENIDOS ¿DESEAN JUGAR? SI/NO: '))
+while aceptacion.lower() == 'si':
+    aleatorio= randint(1,100)
+    print(aleatorio) #dejo para poder comparar y comprobar que funciona el programa.
+    while jugador1!= aleatorio and jugador2!= aleatorio:
+        jugador1= int(input('JUGADOR 1: INGRESE UN NUMERO DEL 1 AL 100. SUERTE! '))
+        ronda = ronda + 1
+        if jugador1> aleatorio:
+            print('el numero ingresado es MAYOR al numero oculto')
+        elif jugador1< aleatorio:
+            print('el numero ingresado es MENOR al numero oculto')
+        else:
+            print(f'¡GANASTE! EL NUMERO OCULTO ES {aleatorio}. LO LOGRASTE EN {ronda} RONDAS')
+            ronda=0
+            break
+        jugador2= int(input('JUGADOR 2: INGRESE UN NUMERO DEL 1 AL 100. SUERTE! '))
+        if jugador2> aleatorio:
+            print('el numero ingresado es MAYOR al numero oculto')
+        elif jugador2< aleatorio:
+            print('el numero ingresado es MENOR al numero oculto')
+        else:
+            print(f'¡GANASTE! EL NUMERO OCULTO ES {aleatorio}. LO LOGRASTE EN {ronda} RONDAS')
+            ronda=0
+            break
+    aceptacion = str(input('¿DESEA VOLVER A JUGAR? SI/NO: '))
+print('¡GRACIAS! VUELVA PRONTO.')
