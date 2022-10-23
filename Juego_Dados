@@ -1,0 +1,17 @@
+import random
+
+fin_juego= 0
+while fin_juego==0:
+    jugador_uno= random.randrange(1,6)
+    jugador_dos= random.randrange(1,6)
+    print('el valor del dado jugador 1 es: ', jugador_uno)
+    print('el valor del dado jugador 2 es: ', jugador_dos)
+    if jugador_uno > jugador_dos:
+        print('ganador jugador 1')
+    elif jugador_uno < jugador_dos:
+        print('ganador jugador 2')
+    else:
+        print('empate')
+    fin_juego= int(input('para jugar otra partida precione 0.\n'
+                         'de lo contrario presione 1.'))
+print('FIN DE LA PARTIDA')
