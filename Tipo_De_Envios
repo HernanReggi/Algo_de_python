@@ -1,0 +1,32 @@
+ifnal= 's'
+while ifnal.lower()== 's':
+    print('Bienvenido')
+    tipo_paquete = int(input('1: PAQUETE\n2: CARTA\nQué tipo de envio desea utilizar? (1/2); '))
+    prioridad = int(input('PRIORIDAD 1\nPRIORIDAD 2\nPRIORIDAD 3\n Ingrese tipo de prioridad (1/2/3); '))
+    if tipo_paquete== 1 and prioridad== 1:
+        peso_kilo= float(input('Ingresar el peso de la carga en "KILOS"; '))
+        pp1= peso_kilo * 34.4
+        print(f'Total a pagar es {pp1}$ ')
+    elif tipo_paquete== 1 and prioridad== 2:
+        peso_kilo= float(input('Ingresar el peso de la carga en "KILOS"; '))
+        pp2= peso_kilo * 29.5
+        print(f'Total a pagar es {pp2}$ ')
+    elif tipo_paquete== 1 and prioridad== 3:
+        peso_kilo= float(input('Ingresar el peso de la carga en "KILOS"; '))
+        pp3= peso_kilo * 22.3
+        print(f'Total a pagar es {pp3}$ ')
+    elif tipo_paquete== 2 and prioridad== 1:
+        peso_gramo= float(input('Ingresar el peso de la carga en "GRAMOS"; '))
+        pc1= peso_gramo * 2.5
+        print(f'Total a pagar es {pc1}$ ')
+    elif tipo_paquete== 2 and prioridad== 2:
+        peso_gramo=float(input('Ingresar peso de la carga en "GRAMOS"; '))
+        pc2= peso_gramo * 1.8
+        print(f'Total a pagar es {pc2}$ ')
+    elif tipo_paquete== 2 and prioridad== 3:
+        peso_gramo= float(input('Ingresar peso de la carga en "GRAMOS"; '))
+        pc3= peso_gramo * 1.2
+        print(f'Total a pagar es {pc3}$ ')
+    else :
+        print('error en el codigo volver a intentar')
+    ifnal= str(input('Desea generar otra carga [s/n] '))
