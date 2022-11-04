@@ -1,5 +1,11 @@
-prom_vta_diario= 3000
-vb_1= 0
+def boletas (vb_1, algo):
+    if promedio>= 3000:
+        print(f'El promedio de ventas del vendedor {nombres_vendedores} es: {promedio}$ \n'
+              f'El vendedor {nombres_vendedores} superó la mínima.')
+    else:
+        print(f'El promedio de ventas del vendedor {nombres_vendedores} es: {promedio}$ \n'
+              f'El vendedor {nombres_vendedores} no superó la mínima.')
+
 
 
 for cantidad_vendedores in range(1,11):
@@ -7,10 +13,6 @@ for cantidad_vendedores in range(1,11):
     for cant_boleta in range(1,4):
         valor_boleta= float(input(f'ingresar valor de la {cant_boleta}º boleta: '))
         vb_1 += valor_boleta
-    if vb_1>= prom_vta_diario:
-        print(f'el promedio de ventas del vendedor {nombres_vendedores} es: {vb_1 /3}$ \n'
-              f'el vendedor {nombres_vendedores} supero la minima.')
-    else:
-        print(f'el promedio de ventas del vendedor {nombres_vendedores} es: {vb_1 /3}$ \n'
-              f'el vendedor {nombres_vendedores} no superó la minima.')
+        promedio= vb_1/ 3
+    print(f'{boletas(vb_1, 3000)}')
     vb_1= 0
